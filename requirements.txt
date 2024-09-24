@@ -9,3 +9,5 @@ python-dotenv==1.0.0
 faiss-cpu==1.7.4  # Or another version that fits your system
 langchain_community==0.0.7  # Ensure the version is up-to-date, adjust as necessary
 tiktoken
+langchain-community~=0.0.7
+aiofiles~=24.1.0

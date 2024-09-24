@@ -1,4 +1,3 @@
-
 from langchain.chains.qa_with_sources.base import QAWithSourcesChain
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings.openai import OpenAIEmbeddings
@@ -40,9 +39,9 @@ class QABot:
 
         return qa_chain
 
-    def answer_question(self, question: str) -> str:
+    async def answer_question(self, question: str) -> str:
         try:
-            answer = self.qa_chain.run(question)
+            answer = await self.qa_chain.arun(question)
             return answer
         except Exception as e:
             return f"Error answering question: {str(e)}"

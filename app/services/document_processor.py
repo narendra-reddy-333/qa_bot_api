@@ -4,12 +4,14 @@ import os
 from fastapi import HTTPException
 from app.utils.pdf_extractor import extract_text_from_pdf
 from fastapi import UploadFile
+import aiofiles
 
-def load_document(file: UploadFile) -> str:
+async def load_document(file: UploadFile) -> str:
     try:
         if file.content_type == 'application/pdf':
-            with tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
-                tmp.write(file.file.read())
+            async with aiofiles.tempfile.NamedTemporaryFile(delete=False, suffix=".pdf") as tmp:
+                contents = await file.read()
+                await tmp.write(contents)
                 tmp_path = tmp.name
             text = extract_text_from_pdf(tmp_path)
             os.unlink(tmp_path)  # Delete the temp file
