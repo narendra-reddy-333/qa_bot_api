@@ -124,7 +124,6 @@ qa-api-service/
 │
 ├── app/
 │   ├── __init__.py
-│   ├── main.py                # FastAPI app entry point
 │   ├── services/
 │   │   ├── document_processor.py  # Handles document loading and processing
 │   │   ├── qa_service.py      # Implements the QA logic using LangChain and OpenAI
@@ -136,6 +135,7 @@ qa-api-service/
 │
 ├── tests/                     # Unit and integration tests
 │
+│── main.py                    # FastAPI app entry point
 ├── .env                       # Environment variables (add your OpenAI API key here)
 ├── requirements.txt           # Python dependencies
 └── README.md                  # Project documentation (this file)
