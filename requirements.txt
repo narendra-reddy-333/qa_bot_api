@@ -1,0 +1,11 @@
+fastapi==0.103.0
+uvicorn==0.23.1
+langchain==0.0.300  # Ensure you're using the latest version as per your needs
+openai==0.27.9
+pydantic==1.10.9
+python-multipart==0.0.6
+PyPDF2==3.0.1
+python-dotenv==1.0.0
+faiss-cpu==1.7.4  # Or another version that fits your system
+langchain_community==0.0.7  # Ensure the version is up-to-date, adjust as necessary
+tiktoken
