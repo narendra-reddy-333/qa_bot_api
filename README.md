@@ -120,7 +120,7 @@ This endpoint accepts a document and a list of questions and returns answers to 
 ## Project Structure
 
 ```bash
-qa-api-service/
+qa_bot_swevice/
 │
 ├── app/
 │   ├── __init__.py
